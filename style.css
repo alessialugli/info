@@ -1,0 +1,9 @@
+li {
+    font-size: 2rem;
+    width: 400px;
+    margin: 8px;
+    padding: 8px;
+    list-style: none
+    }
+    .midlaner {background-color: #d60d61}
+    .toplaner {background-color: #09f11c}
