@@ -10,14 +10,30 @@ app.set('view engine', 'handlebars');
 
 app.engine('handlebars', handlebars({
     layoutsDir: __dirname + '/views/layouts', 
-    defaultLayout: 'planB', 
     partialsDir: __dirname + '/views/partials/'
 }));
 
 app.use(express.static('public'))
 
+fakeApi = () => {
+    return [
+      {
+        name: 'Køge',
+        lane: 'midlaner'
+      },
+      {
+        name: 'Næstved',
+        lane: 'toplaner'
+      },
+      {
+        name: 'Silkeborg',
+        lane: 'toplaner'
+      }
+    ];
+}
 app.get('/', (req, res) => {
-    res.render('main', {layout: 'index'});
+    res.render('main', {layout: 'index', 
+    suggestedCities: fakeApi(), listExists: false});
 });
 
 app.listen(port, () => console.log(`App listening to port ${port}`));
