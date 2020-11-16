@@ -1,6 +1,10 @@
+h1{
+    text-align:center;
+}
+
 li {
-    font-size: 2rem;
-    width: 400px;
+    font-size: 1rem;
+    width: 200px;
     margin: 8px;
     padding: 8px;
     list-style: none
