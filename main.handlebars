@@ -1,2 +1,13 @@
 {{> jutland}}
+
 {{> fyn}}
+
+{{> sjaelland}}
+
+{{#if listExists}} 
+  <ul>
+    {{#each suggestedCities}}
+      <li class={{this.lane}}>{{this.name}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
